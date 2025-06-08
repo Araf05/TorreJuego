@@ -1,0 +1,17 @@
+// Paleta de colores
+$color-primary: #191D2F; // Azul oscuro - Fondo header, texto principal
+$color-background: #F9F9F9; // Fondo principal
+$color-accent: #FED049; // Amarillo - CTA (botones principales)
+$color-success: #CFFDE1; // Verde claro - mensajes positivos, tarjetas suaves
+$color-secondary: #68B984; // Verde medio - botones secundarios, elementos destacados
+$color-white: #FFFFFF;
+$color-gray: #7A7A7A; // Texto secundario, íconos
+
+header {
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+body {
+    background-color: $color-background;
+}

@@ -46,6 +46,17 @@ header {
   align-items: center;
 }
 
+.product-gallery {
+  background-color: #CFFDE1;
+  padding: 3rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
 .product-card {
   background-color: #FFFFFF;
   border: 1px solid #6673ae;

@@ -38,14 +38,92 @@ header {
   background-color: #191D2F;
   color: #FFFFFF;
 }
-
-.headerContainer {
+header .headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header .headerContainer .searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+header .headerContainer .searchContainer input[type=search] {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 0.9rem;
+}
+header .headerContainer .searchContainer i {
+  font-size: 1.2rem;
+}
+header .headerContainer img {
+  height: 50px;
+}
+header .headerContainer .cartContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  position: relative;
+}
+header .headerContainer .cartContainer i {
+  font-size: 1.3rem;
+}
+header .headerContainer .cartContainer span {
+  background-color: #FED049;
+  color: #191D2F;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0.3rem 0.6rem;
+  position: absolute;
+  top: -10px;
+  right: -28px;
+}
+header .headerContainer .button-secondary {
+  margin-left: 1rem;
+}
+header nav {
+  background-color: #10131e;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 0.75rem 0;
+  margin: 0;
+}
+header nav ul li {
+  cursor: pointer;
+}
+header nav ul li:hover {
+  text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .headerContainer .searchContainer,
+  .headerContainer .cartContainer,
+  .headerContainer .button-secondary {
+    order: 2;
+  }
+  .headerContainer img {
+    order: 1;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
 .product-gallery {
   background-color: #CFFDE1;
   padding: 3rem;

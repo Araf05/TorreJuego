@@ -1,1 +1,91 @@
-body{background-color:#f9f9f9;color:#191d2f}.button-primary{background-color:#fed049;color:#191d2f}.button-secondary{background-color:#68b984;color:#fff;padding:.6rem 1.5rem;border:none;border-radius:.5rem;font-size:1rem;font-weight:600;cursor:pointer;transition:background-color .3s ease,transform .2s ease}.button-secondary:hover{background-color:#4ba36a;transform:scale(1.03)}.button-secondary:active{background-color:#43915e;transform:scale(0.98)}.button-secondary:disabled{background-color:#aed9bd;color:#7a7a7a;cursor:not-allowed;opacity:.6}header{background-color:#191d2f;color:#fff}.headerContainer{display:flex;flex-direction:row;justify-content:space-around;align-items:center}/*# sourceMappingURL=estilos.css.map */
+body {
+  background-color: #F9F9F9;
+  color: #191D2F;
+}
+
+.button-primary {
+  background-color: #FED049;
+  color: #191D2F;
+}
+
+.button-secondary {
+  background-color: #68B984;
+  color: #FFFFFF;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button-secondary:hover {
+  background-color: #4ba36a;
+  transform: scale(1.03);
+}
+.button-secondary:active {
+  background-color: #43915e;
+  transform: scale(0.98);
+}
+.button-secondary:disabled {
+  background-color: #aed9bd;
+  color: #7A7A7A;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+header {
+  background-color: #191D2F;
+  color: #FFFFFF;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product-card {
+  background-color: #FFFFFF;
+  border: 1px solid #6673ae;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card .product-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.product-card .product-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.product-card .product-info .product-name {
+  color: #191D2F;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+.product-card .product-info .product-description {
+  color: #7A7A7A;
+  font-size: 0.9rem;
+}
+.product-card .product-info .product-price {
+  color: #FED049;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.product-card .product-info .button-secondary {
+  margin-top: 0.5rem;
+}/*# sourceMappingURL=estilos.css.map */

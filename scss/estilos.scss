@@ -7,11 +7,59 @@ $color-secondary: #68B984; // Verde medio - botones secundarios, elementos desta
 $color-white: #FFFFFF;
 $color-gray: #7A7A7A; // Texto secundario, íconos
 
+
+body {
+    background-color: $color-background;
+    color: $color-primary;
+}
+
+.button-primary {
+    background-color: $color-accent;
+    color: $color-primary;
+}
+
+.button-secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    // Efecto al pasar el mouse
+    &:hover {
+        background-color: darken($color-secondary, 10%); // oscurece el verde un poco
+        transform: scale(1.03); // ligera ampliación al hacer hover
+    }
+
+    // Efecto al hacer clic
+    &:active {
+        background-color: darken($color-secondary, 15%);
+        transform: scale(0.98);
+    }
+
+    // Accesibilidad / deshabilitado
+    &:disabled {
+        background-color: lighten($color-secondary, 20%);
+        color: $color-gray;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+}
+
+
 header {
     background-color: $color-primary;
     color: $color-white;
 }
 
-body {
-    background-color: $color-background;
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
 }

@@ -1,16 +1,37 @@
 body {
-  background-color: #F9F9F9;
-  color: #191D2F;
+  background-color: #F7F6F2;
+  color: #3E3E7A;
 }
 
 .button-primary {
-  background-color: #FED049;
-  color: #191D2F;
+  background-color: #3E3E7A;
+  color: #FFFFFF;
+  padding: 0.6rem 1.5rem;
+  border: 3px solid #FFFFFF;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button-primary:hover {
+  background-color: #2d2d58;
+  transform: scale(1.03);
+}
+.button-primary:active {
+  background-color: #242447;
+  transform: scale(0.98);
+}
+.button-primary:disabled {
+  background-color: #6a6ab4;
+  color: #FFFFFF;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .button-secondary {
-  background-color: #68B984;
-  color: #FFFFFF;
+  background-color: #FFD05B;
+  color: #3E3E7A;
   padding: 0.6rem 1.5rem;
   border: none;
   border-radius: 0.5rem;
@@ -20,22 +41,22 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .button-secondary:hover {
-  background-color: #4ba36a;
+  background-color: #ffc128;
   transform: scale(1.03);
 }
 .button-secondary:active {
-  background-color: #43915e;
+  background-color: #ffba0f;
   transform: scale(0.98);
 }
 .button-secondary:disabled {
-  background-color: #aed9bd;
-  color: #7A7A7A;
+  background-color: #ffedc1;
+  color: #3E3E7A;
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 header {
-  background-color: #191D2F;
+  background-color: #3E3E7A;
   color: #FFFFFF;
 }
 header .headerContainer {
@@ -74,8 +95,8 @@ header .headerContainer .cartContainer i {
   font-size: 1.3rem;
 }
 header .headerContainer .cartContainer span {
-  background-color: #FED049;
-  color: #191D2F;
+  background-color: #FFD05B;
+  color: #3E3E7A;
   font-size: 0.75rem;
   font-weight: bold;
   border-radius: 50%;
@@ -88,11 +109,12 @@ header .headerContainer .button-secondary {
   margin-left: 1rem;
 }
 header nav {
-  background-color: #10131e;
+  background-color: #353569;
 }
 header nav ul {
   list-style: none;
   display: flex;
+  flex-direction: row;
   gap: 1.5rem;
   justify-content: center;
   padding: 0.75rem 0;
@@ -108,24 +130,27 @@ header nav ul li:hover {
 @media (max-width: 768px) {
   .headerContainer {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
   }
   .headerContainer .searchContainer,
   .headerContainer .cartContainer,
-  .headerContainer .button-secondary {
+  .headerContainer .button-primary {
     order: 2;
   }
   .headerContainer img {
     order: 1;
   }
-  nav ul {
+  header nav ul {
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 0.75rem;
   }
 }
 .product-gallery {
-  background-color: #CFFDE1;
+  background-color: #F7F6F2;
   padding: 3rem;
 }
 
@@ -137,7 +162,7 @@ header nav ul li:hover {
 
 .product-card {
   background-color: #FFFFFF;
-  border: 1px solid #6673ae;
+  border: 1px solid #aeaed6;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -152,7 +177,7 @@ header nav ul li:hover {
 .product-card .product-image {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 .product-card .product-info {
   padding: 1rem;
@@ -161,20 +186,61 @@ header nav ul li:hover {
   gap: 0.5rem;
 }
 .product-card .product-info .product-name {
-  color: #191D2F;
+  color: #3E3E7A;
   font-size: 1.25rem;
   font-weight: bold;
   margin: 0;
 }
 .product-card .product-info .product-description {
-  color: #7A7A7A;
+  color: #4F4F4F;
   font-size: 0.9rem;
 }
 .product-card .product-info .product-price {
-  color: #FED049;
+  color: #3E3E7A;
   font-weight: 700;
   font-size: 1.1rem;
 }
 .product-card .product-info .button-secondary {
   margin-top: 0.5rem;
+}
+
+footer {
+  background-color: #3E3E7A;
+  color: #FFFFFF;
+  display: flex;
+}
+footer div {
+  padding: 1rem;
+  width: 100%;
+  background-color: #353569;
+}
+footer div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 0.75rem 0;
+  margin: 0;
+}
+footer div ul li {
+  cursor: pointer;
+}
+footer div ul li:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+  footer div ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
 }/*# sourceMappingURL=estilos.css.map */

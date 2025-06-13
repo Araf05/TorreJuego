@@ -60,7 +60,6 @@ header {
   color: #FFFFFF;
 }
 header .headerContainer {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
@@ -68,33 +67,43 @@ header .headerContainer {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+header .headerContainer i {
+  font-size: 1.2rem;
+}
+header .headerContainer i:hover {
+  cursor: pointer;
+  color: #FFD05B;
+  font-size: x-large;
+}
+header .headerContainer i.fa-bars {
+  display: none;
+}
 header .headerContainer .searchContainer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 header .headerContainer .searchContainer input[type=search] {
+  width: 250px;
   padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
   border: none;
   font-size: 0.9rem;
 }
-header .headerContainer .searchContainer i {
-  font-size: 1.2rem;
-}
 header .headerContainer img {
   height: 50px;
 }
-header .headerContainer .cartContainer {
+header .headerContainer .userContainer {
+  display: flex;
+  gap: 3rem;
+}
+header .headerContainer .userContainer .cartContainer {
   display: flex;
   align-items: center;
   gap: 0.3rem;
   position: relative;
 }
-header .headerContainer .cartContainer i {
-  font-size: 1.3rem;
-}
-header .headerContainer .cartContainer span {
+header .headerContainer .userContainer .cartContainer span {
   background-color: #FFD05B;
   color: #3E3E7A;
   font-size: 0.75rem;
@@ -102,10 +111,10 @@ header .headerContainer .cartContainer span {
   border-radius: 50%;
   padding: 0.3rem 0.6rem;
   position: absolute;
-  top: -10px;
+  top: -1px;
   right: -28px;
 }
-header .headerContainer .button-secondary {
+header .headerContainer .userContainer .button-secondary {
   margin-left: 1rem;
 }
 header nav {
@@ -128,19 +137,8 @@ header nav ul li:hover {
 }
 
 @media (max-width: 768px) {
-  .headerContainer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-  .headerContainer .searchContainer,
-  .headerContainer .cartContainer,
-  .headerContainer .button-primary {
-    order: 2;
-  }
-  .headerContainer img {
-    order: 1;
+  .headerContainer input[type=search] {
+    display: none;
   }
   header nav ul {
     flex-direction: column;
@@ -161,8 +159,8 @@ header nav ul li:hover {
 }
 
 .product-card {
-  background-color: #FFFFFF;
-  border: 1px solid #aeaed6;
+  background-color: #F7F6F2;
+  border: none;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
